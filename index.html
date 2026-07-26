@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shadow Strike</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800&family=Rajdhani:wght@500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="game-shell">
+      <header>
+        <div class="brand"><img class="brand-logo" src="w-logo.png" alt="Shadow Strike logo" /><div><b>SHADOW STRIKE</b><small>NINJA COMBAT ARENA</small></div></div>
+        <button id="soundButton" aria-label="Toggle sound">♫ SOUND: ON</button>
+      </header>
+
+      <section class="game-wrap">
+        <canvas id="game" width="1200" height="675" aria-label="Shadow Strike ninja fighting game"></canvas>
+        <div id="startScreen" class="overlay">
+          <div class="start-card">
+            <p class="eyebrow">THE MOON WATCHES</p>
+            <h1>SHADOW<br><i>STRIKE</i></h1>
+            <p>Defeat the Ronin in a midnight duel.</p>
+            <button id="startButton">ENTER THE ARENA <span>→</span></button>
+            <div class="controls-copy"><span>← → <b>MOVE</b></span><span>SPACE <b>JUMP</b></span><span>J <b>STRIKE</b></span><span>K <b>HEAVY</b></span><span>L <b>SHADOW ART</b></span></div>
+          </div>
+        </div>
+        <div id="roundBanner" class="round-banner"></div>
+      </section>
+
+      <section class="mobile-controls" aria-label="Touch controls">
+        <div class="move-buttons"><button data-key="ArrowLeft">←</button><button data-key="ArrowRight">→</button></div>
+        <div class="action-buttons"><button data-key="KeyJ" class="strike">STRIKE</button><button data-key="KeyK" class="heavy">HEAVY</button><button data-key="KeyL" class="special">ART</button><button data-key="Space" class="jump">↑</button></div>
+      </section>
+      <p class="tip">TIP: Chain quick strikes together. Time your heavy attack when the Ronin is vulnerable.</p>
+    </main>
+    <script src="game.js"></script>
+  </body>
+</html>
